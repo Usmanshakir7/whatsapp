@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            color: #e70505 ;
+        }
+
+        nav {
+            width: 100%;
+            height: 28px;
+            background-color: #ece5dd;
+            float: left;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0px;
+        }
+
+        nav .left {
+            margin: 0px;
+            width: 20%;
+            height: 26px;
+            
+            
+            display: flex;
+
+        }
+
+        .left h4 {
+            margin: 4px;
+            padding-left: 5px;
+            color: black;
+        }
+
+        .left img {
+            padding-left: 2px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            /* display: inline-block; */
+        }
+
+        nav .right {
+            margin: 0px;
+            width: 20%;
+            height: 26px;
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .right h4 {
+            margin: 0px;
+        }
+
+        .min {
+            margin: 2px;
+            padding: 2px;
+            position: absolute;
+            top: -9px;
+            right: 70px;
+
+        }
+
+        .max {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .close {
+            margin: 2px;
+            padding: 2px;
+        }
+
+        #left {
+            width: 25%;
+            height: 646px;
+         
+            background-color: #ffff;
+            
+        }
+
+        .search img {
+            width: 24px;
+            height: 26px;
+            color: white;
+            position: absolute;
+
+            left: 293px;
+
+            /* border-radius: 50%; */
+        }
+
+        .chat {
+            display: flex;
+            
+            justify-content: baseline;
+            align-items: center;
+            color: black;
+            box-sizing: border-box;
+        }
+.chat:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+        .chat img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+
+        }
+
+        .message {
+            /* border: 2px solid green; */
+            width: 100%;
+            height: 40px;
+            position: relative;
+            color: black;
+        }
+
+        .chat h4 {
+            position: absolute;
+            top: -23px;
+            left: 17px;
+            text-transform: capitalize;
+            font-size: 17px;
+            color: black;
+        }
+
+        .chat p {
+            text-transform: capitalize;
+            position: absolute;
+            top: 10px;
+            left: 17px;
+            font-size: 12px;
+        }
+
+        span {
+            color: black;
+            position: absolute;
+            top: 4px;
+            right: 5px;
+            font-size: smaller;
+            font-weight: 600;
+        }
+
+        .chat h2 {
+            position: absolute;
+            top: -11px;
+            left: 17px;
+            color: black;
+        }
+
+        input {
+            width: 95%;
+            height: 24px;
+            margin-left: 6px;
+            border: 1px solid gray;
+            box-shadow: 0px 0px 3px rgb(235, 231, 231);
+            background-color: rgb(235, 228, 228);
+            outline: none;
+
+        }
+
+        input:focus {
+
+            border-bottom: 3px solid rgb(1, 78, 14);
+
+
+
+        }
+
+        #right {
+            width: 75%;
+            height: 646px;
+            /* border: 2px solid red; */
+            display: flex;
+            background-color: #e3e0db;
+         
+
+        }
+               .footer {
+            width: 1012px;
+            height:30px;
+            background-color: #ffff;
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            /* overflow: hidden; */
+        }
+
+        
+        .emo{
+            width: 25px;
+            height: 25px;
+            margin-top: 2px;
+            padding-left: 70px;
+        }
+.attac{
+    width: 25px;
+            height: 25px;
+            padding-top: 2px;
+    margin-left: 24px;
+}
+.send{
+    position: absolute;
+    left: 700px;
+    bottom:2px;
+   
+}
+        .footer input {
+            width: 56%;
+            position: absolute;
+            bottom: 1px;
+            left: 160px;
+            background-color: white;
+            outline: none;
+            border: 1px solid black
+            ;
+           
+        }
+        #bar{
+            width: 1012px;
+            height:50px;
+            background-color: #52504c;
+            position: absolute;
+            top: 28px;
+            right: 0px;
+            display: flex;
+            /* justify-content: flex-start; */
+            align-items: center;
+        }
+        #bar img{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-left: 5px;
+        }
+        #bar h5{
+            position: absolute;
+            top: -25px;
+            left: 48px;
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+        }
+        #bar p{
+            text-transform: capitalize;
+            position: absolute;
+            top: 12px;
+            left: 50px;
+            font-size: 12px;
+        }
+        .call{
+            width: 24px;
+            height: 26px;
+            color: white;
+            position: absolute;
+
+            right: 165px;
+        }
+        .video{
+            width: 24px;
+            height: 26px;
+            color: white;
+            position: absolute;
+
+            right: 120px;
+        }
+        .srch{   width: 24px;
+            height: 26px;
+            color: white;
+            position: absolute;
+            right:70px;}
+            .srch:hover{
+                background-color: rgb(121, 112, 112);
+                cursor: pointer;
+            }
+            .video:hover{
+                background-color: #a19393;
+                cursor: pointer;
+            }
+            .call:hover{
+                background-color: rgb(156, 147, 147);
+                cursor: pointer;
+            }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <img src="img/images.jpeg" alt="">
+            <h4>Whatsapp</h4>
+        </div>
+        <div class="right">
+            <img class="min" src="img/minimize_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            <img class="max" src="img/crop_7_5_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            <img class="close" src="img/close_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+
+        </div>
+      
+    </nav>
+    <header id="left">
+        <br>
+        <div id="bar">
+          <img src="img/images.jpeg" alt="">
+          <h5>sohail</h5>
+          <p>online</p>
+          <img class="call" src="img/call_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+       <img class="video" src="img/video_call_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          <img class="srch" src="img/search_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h2>chats</h2>
+            </div>
+        </div>
+        <hr>
+        <div class="search">
+            <input type="search" name="search" id="search" placeholder="search or start new chat">
+            <img src="img/search_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        </div>
+        <hr>
+        <div>
+
+        </div>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+        <div class="chat"><img src="img/taylor-kiser-POFG828-GQc-unsplash.jpg" alt="">
+            <div class="message">
+                <h4>sohail tanvir</h4><br>
+                <p>ok i can tell him</p><span>14:56</span>
+            </div>
+        </div>
+        <hr>
+
+    </header>
+    <header id="right">
+
+        <div class="footer">
+
+           
+            <input type="text" name="message" placeholder="type a message">
+            <img class="emo" src="img/sentiment_satisfied_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            <img class="attac" src="img/attachment_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            <img class="send" src="img/crop_7_5_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+           
+
+        </div>
+    </header>
+</body>
+
+</html>
